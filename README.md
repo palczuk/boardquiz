@@ -1,28 +1,34 @@
 # BoardQuiz
 
-Responsive Army Promotion Board study web app built from exported Quizlet study sets.
+Responsive, no-backend Army Promotion Board study companion built from 24 Quizlet-exported study sets.
 
-## Features
-- 24 study topics / 236 questions
-- Topic review
-- Flashcards with browser-saved progress
-- Multiple-choice test mode
-- Random Board Simulation
-- NCO Creed training: read, hidden words, first-letter cues, and typed recall
-- Responsive desktop/mobile navigation
-- No backend or account required
+## Included
+
+- Flashcards with **mastered** and **review again** tracking.
+- Expandable study guides for every section.
+- Separate scored tests for every study section. Before every test, the user sees the accumulated correct, incorrect, and best-round score.
+- Random Board Drill questions for oral-practice sessions.
+- NCO Creed practice: read, hidden words, first-letter cues, and typed recall.
+- A general readiness rank based on flashcard mastery and test accuracy.
+- A desktop-first design that adapts to phones.
+
+Progress is saved locally in the browser with `localStorage`; no account or backend is required.
+
+## Test locally
+
+Open the `boardquiz` folder using a local web server, then visit `index.html`. The study data is loaded from `quizlet_backup_24_sets.json`, and browsers may block that request if the HTML file is opened directly.
 
 ## Publish with GitHub Pages
-1. Upload all files in this folder to the repository root.
-2. In GitHub: **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select branch **main** and folder **/(root)**, then Save.
-5. GitHub will provide the public Pages URL.
 
-## Files
-- `index.html` — app shell
-- `style.css` — responsive design
-- `app.js` — study modes and NCO Creed trainer
-- `quizlet_backup_24_sets.json` — study content
+1. Put the contents of this `boardquiz` folder at the root of your GitHub repository.
+2. On GitHub, go to **Settings → Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Choose `main` and `/(root)`, then save.
+5. GitHub will display the public website address once deployment finishes.
 
-Progress is saved locally with `localStorage` and therefore stays on the device/browser where the student studies.
+## Main files
+
+- `index.html` — app layout and navigation
+- `style.css` — responsive visual design
+- `app.js` — study modes, tests, ranking, and saved progress
+- `quizlet_backup_24_sets.json` — supplied study content

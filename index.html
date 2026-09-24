@@ -1,4 +1,40 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BoardQuiz — Army Promotion Board Study</title><link rel="stylesheet" href="style.css"></head><body>
-<header><button id="menuBtn">☰</button><div><b>BOARD<span>QUIZ</span></b><small>Army Promotion Board Study</small></div><div id="streak">0 mastered</div></header>
-<div class="layout"><aside id="nav"><button data-view="home">⌂ Home</button><button data-view="study">▤ Study</button><button data-view="flash">▣ Flashcards</button><button data-view="test">✓ Test</button><button data-view="board">★ Board Simulation</button><button data-view="creed">▰ NCO Creed</button><button data-view="progress">◉ Progress</button></aside><main id="app"></main></div>
-<script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10170f">
+  <meta name="description" content="A focused Army Promotion Board study companion with flashcards, topic quizzes, and NCO Creed practice.">
+  <title>BoardQuiz | Army Study Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <header class="topbar">
+    <button class="menu-button" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#home" data-view="home" aria-label="BoardQuiz home">
+      <span class="brand-mark" aria-hidden="true">BQ</span>
+      <span><strong>BOARD<span>QUIZ</span></strong><small>Promotion Board Study</small></span>
+    </a>
+    <div class="header-status" id="headerStatus" aria-live="polite"></div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="nav" aria-label="Main navigation">
+      <div class="sidebar-label">MISSION CONTROL</div>
+      <button type="button" data-view="home"><span aria-hidden="true">⌂</span> Dashboard</button>
+      <button type="button" data-view="study"><span aria-hidden="true">▤</span> Study guide</button>
+      <button type="button" data-view="flash"><span aria-hidden="true">▣</span> Flashcards</button>
+      <button type="button" data-view="test"><span aria-hidden="true">✓</span> Section test</button>
+      <button type="button" data-view="board"><span aria-hidden="true">★</span> Board drill</button>
+      <button type="button" data-view="creed"><span aria-hidden="true">¶</span> NCO Creed</button>
+      <button type="button" data-view="progress"><span aria-hidden="true">◉</span> Progress</button>
+      <div class="sidebar-footer"><span class="signal" aria-hidden="true"></span>Progress is saved on this device</div>
+    </aside>
+    <main id="app" tabindex="-1" aria-live="polite"><div class="loading"><span class="loader"></span> Preparing your study material…</div></main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
